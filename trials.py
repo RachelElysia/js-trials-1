@@ -29,15 +29,19 @@ def print_as_numbered_list(items):
     for count, value in enumerate(items):
         print (count, value)
 
-
+# DONE
 def get_range(start, stop):
-    nums = []
-
-    for 
+    return range(start, stop)
 
 
 def censor_vowels(word):
+    chars = []
 
+    for letter in word:
+        if 'aeiou'
+
+        chars.append(letter)
+    return " ".join(chars)
 
 def snake_to_camel(string):
     camel_case = []
@@ -57,8 +61,15 @@ def longest_word_length(words):
     
     return longest
 
+# DONE
 def truncate(string):
-    pass  # TODO: replace this line with your code
+    result = []
+
+    for char in string:
+        if len(result) == 0 or char != result[len(result) -1]:
+            result.append(char)
+
+    return "".join(result)
 
 # DONE
 def has_balanced_parens(string):
@@ -72,15 +83,31 @@ def has_balanced_parens(string):
 
     return parens == 0
 
+
+# DONE
 def compress(string):
     compressed = []
 
     currChar = ''
     charCount = 0
+
     for char in string:
+
         if char != currChar:
             compressed.append(currChar)
 
             if (charCount > 1):
-                compressed.append(charCount)
+                compressed.append(str(charCount))
+            
+            currChar = charchar
+            charCount = 0
+
+        charCount +=1
+    
+    # Last letter
+    compressed.append(currChar)
+    if charCount > 1:
+        compressed.append(str(charCount))
+    
+    return ''.join(compressed)
             
