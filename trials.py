@@ -38,16 +38,19 @@ def censor_vowels(word):
     chars = []
 
     for letter in word:
-        if 'aeiou'
+        if 'aeiou' in letter:
+            chars.append('*')
+        else:
+            chars.append(letter)
 
-        chars.append(letter)
-    return " ".join(chars)
+    return ''.join(chars)
 
+# DONE
 def snake_to_camel(string):
     camel_case = []
 
     for word in string:
-        camel_case.append(word.uppercase(0)+word.lowercase(1:))
+        camel_case.append(word.uppercase(0) + word.lowercase(1:))
 
     return " ".join(camel_case)
 
